@@ -215,6 +215,22 @@ func InitializeConstruction(
 		return nil, fmt.Errorf("%w: unable to get account balances", err)
 	}
 
+	// Populate account balances with account coins
+	for _, acc := range accBalances {
+		blockID, coins, _, err := onlineFetcher.AccountCoinsRetry(
+			ctx, network, acc.Account, false, []*types.Currency{acc.Amount.Currency},
+		)
+		if err != nil {
+			return nil, fmt.Errorf("%w: unable to get account coins", err)
+		}
+		if blockID.Hash != acc.Block.Hash || blockID.Index != acc.Block.Index {
+			const msg = "returned account coins probably based on another block, than previously acquired balance"
+			return nil, fmt.Errorf(msg)
+		}
+
+		acc.Coins = coins
+	}
+
 	err = balanceStorage.SetBalanceImported(ctx, nil, accBalances)
 	if err != nil {
 		return nil, fmt.Errorf("%w: unable to set balances", err)
