@@ -29,19 +29,9 @@ Before diving into the CLI, we recommend taking a look at the Rosetta API Docs:
 * [Construction API](https://www.rosetta-api.org/docs/construction_api_introduction.html)
 
 ## Install
-To download a binary for the latest release, run:
+To install rosetta-cli, please, download this repository and run the following command:
 ```
-curl -sSfL https://raw.githubusercontent.com/DeFiCh/rosetta-cli/master/scripts/install.sh | sh -s
-```
-
-The binary will be installed inside the `./bin` directory (relative to where the install command was run).
-
-_Downloading binaries from the Github UI will cause permission errors on Mac._
-
-### Installing in Custom Location
-To download the binary into a specific directory, run:
-```
-curl -sSfL https://raw.githubusercontent.com/DeFiCh/rosetta-cli/master/scripts/install.sh | sh -s -- -b <relative directory>
+make install
 ```
 
 ## Usage
