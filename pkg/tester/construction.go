@@ -23,10 +23,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coinbase/rosetta-cli/configuration"
-	"github.com/coinbase/rosetta-cli/pkg/logger"
-	"github.com/coinbase/rosetta-cli/pkg/processor"
-	"github.com/coinbase/rosetta-cli/pkg/results"
+	"github.com/DeFiCh/rosetta-cli/configuration"
+	"github.com/DeFiCh/rosetta-cli/pkg/logger"
+	"github.com/DeFiCh/rosetta-cli/pkg/processor"
+	"github.com/DeFiCh/rosetta-cli/pkg/results"
 
 	"github.com/coinbase/rosetta-sdk-go/constructor/coordinator"
 	"github.com/coinbase/rosetta-sdk-go/fetcher"

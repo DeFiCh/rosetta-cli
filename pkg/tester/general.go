@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coinbase/rosetta-cli/pkg/logger"
+	"github.com/DeFiCh/rosetta-cli/pkg/logger"
 )
 
 const (

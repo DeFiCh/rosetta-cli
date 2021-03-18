@@ -24,7 +24,7 @@ import (
 	"runtime/pprof"
 	"syscall"
 
-	"github.com/coinbase/rosetta-cli/configuration"
+	"github.com/DeFiCh/rosetta-cli/configuration"
 
 	"github.com/coinbase/rosetta-sdk-go/utils"
 	"github.com/fatih/color"
